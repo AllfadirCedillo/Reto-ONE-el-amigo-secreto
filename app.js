@@ -6,6 +6,12 @@ let arrayAmigos = [];
 
 //declaramos las funciones para agregar y sortear amigos
 function agregarAmigo() {
+	if(inputAmigos.value == ""){
+		alert("No se pueden incluir registros vacios")
+		inputAmigos.value = "";
+		inputAmigos.focus();
+		return null
+	}
 	let nuevoAmigo = document.createElement("p");
 	nuevoAmigo.textContent = inputAmigos.value;
 	arrayAmigos.push(inputAmigos.value);
